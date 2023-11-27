@@ -1,0 +1,260 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --main-red: #be3144;
+  --main-gray: #303841;
+  --main-blue: #45567d;
+  --main-white: #f0f0f0;
+  --main-charcoal: #3a3d40;
+  --main-orange: #ff7f50;
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--main-white);
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+h1, h2 {
+    font-family: 'Raleway', sans-serif;
+}
+
+/* nav bar */
+#navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--main-red);
+  height: 10vh;
+  z-index:10
+}
+
+#navbar a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  text-decoration: none;
+  color: var(--main-white);
+  font-size: 2.2rem;
+  height: 10vh;
+  
+  
+}
+
+
+#navbar a:hover {
+  background-color: var(--main-gray);
+  transform: scale(1.05);
+  transition: transform 0.1s ease-in-out;
+}
+/* welcome section */
+
+#welcome-section {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(65deg, var(--main-charcoal) 0%, #171819 95%);
+}
+
+.heading {
+  display: flex;
+}
+.welcome-text:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease-out;
+  cursor: grab;
+}
+#welcome-section h1 {
+  font-size: 6rem;
+  font-weight: 800;
+}
+#welcome-section p {
+  font-size: 3rem;
+  font-style: italic;
+  color: var(--main-red);
+  font-weight: 200;
+}
+
+/*projects section */
+#projects {
+  background-color: var(--main-blue);
+  padding: 10rem 2rem;
+}
+
+#projects h2 {
+    font-weight: 800;
+    text-align: center;
+    font-size: 4rem;
+    padding-bottom: 6rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 4rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-bottom: 6rem;
+}
+.projects-image {
+  width:100%;
+  object-fit: cover;
+  border-radius: 4px;
+  
+}
+
+.projects-grid a {
+  text-decoration: none;
+  color: var(--main-white);
+  background-color: var(--main-gray);
+  text-align: center;
+  font-size: 2rem;
+  box-shadow: 2px 2px var(--main-charcoal);
+  border-radius: 4px;
+}
+
+.projects-grid p {
+  padding: 2rem 0.5rem;
+}
+
+.projects-grid a:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease-in-out;
+}
+.projects-grid .code {
+  color: var(--main-gray);
+}
+.projects-grid a:hover .code {
+  color: var(--main-orange);
+  transition: color 0.7s ease-in;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+.show-all {
+  color: var(--main-white);
+  background: var(--main-gray);
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+}
+
+.show-all i {
+  margin-left: 3px;
+}
+
+.show-all:hover {
+  background-color: var(--main-red);
+  transition: background 0.3s ease-out;
+}
+
+.show-all:hover i {
+  transform: translateX(4px);
+  transition: transform 0.3s ease-in-out;
+}
+
+
+/* contact section */
+#contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-gray);
+  height: 75vh;
+}
+
+#contact h2 {
+  font-size: 6rem;
+  text-align: center;
+}
+
+#contact p {
+  font-size: 2rem;
+  text-align: center;
+  font-style: italic;
+  font-weight: 200;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+}
+
+.contact-links a {
+    padding: 1rem 2rem;
+    font-size: 2.4rem;
+    text-decoration: none;
+    color: var(--main-white);
+}
+
+.contact-links a:hover {
+    transform: translateY(7px);
+    transition: transform 0.3s ease-out;
+}
+/* footer */
+footer {
+  height: 15vh;
+  border-top: var(--main-red) 4px solid;
+  background-color: var(--main-gray);
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  
+}
+@media (max-width: 75em) {
+  html {
+    font-size: 60%;
+  }
+}
+
+@media (max-width: 61.25em) {
+  html {
+    font-size: 55%;
+  }
+  .contact-header h2 {
+    font-size: 40%;
+  }
+}
+
+@media (max-width: 30em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 26em) {
+  html {
+    font-size: 40%;
+  }
+  .heading {
+    flex-direction: column;
+  }
+  #projects {
+    scroll-margin-top: 40px;
+  }
+}
